@@ -28,11 +28,11 @@ public class Pago {
     private Empleado empleado;
 
     @ManyToOne
-    @JoinColumn(name = "id_alquiler", nullable = false)
-    private Alquiler alquiler;
-
-    @ManyToOne
     @JoinColumn(name = "id_metodo", nullable = false)
     private Metodo metodo;
+
+    @OneToOne
+    @JoinColumn(name = "id_alquiler", referencedColumnName = "id")
+    private Alquiler alquiler;
 
 }

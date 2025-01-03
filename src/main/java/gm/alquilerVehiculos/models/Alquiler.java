@@ -6,8 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import java.sql.Date;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
 @Data
@@ -40,8 +38,5 @@ public class Alquiler {
     @ManyToOne
     @JoinColumn(name = "id_empleado", nullable = false)
     private Empleado empleado;
-
-    @OneToMany(mappedBy = "alquiler")
-    private List<Pago> pagos = new ArrayList<>();
 
 }
