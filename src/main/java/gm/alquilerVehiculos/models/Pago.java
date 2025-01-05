@@ -20,13 +20,13 @@ public class Pago {
 
     @Column(nullable = false)
     private Date fecha;
+
     @Column(nullable = false, length = 10)
     private Double importe;
 
     @ManyToOne
     @JoinColumn(name = "id_empleado", nullable = false)
     private Empleado empleado;
-
     @ManyToOne
     @JoinColumn(name = "id_metodo", nullable = false)
     private Metodo metodo;
@@ -34,5 +34,4 @@ public class Pago {
     @OneToOne
     @JoinColumn(name = "id_alquiler", referencedColumnName = "id")
     private Alquiler alquiler;
-
 }

@@ -20,8 +20,10 @@ public class Vehiculo {
     private Integer id;
     @Column(length = 10, nullable = false)
     private String placa;
+
     @OneToMany(mappedBy = "vehiculo")
     private List<Alquiler> alquilers = new ArrayList<>();
+
     @ManyToOne
     @JoinColumn(name = "id_tipo", nullable = false)
     private Tipo tipo;
@@ -31,6 +33,4 @@ public class Vehiculo {
     @ManyToOne
     @JoinColumn(name = "id_estado", nullable = false)
     private Estado estado;
-
-    //    private Integer id_estado;
 }

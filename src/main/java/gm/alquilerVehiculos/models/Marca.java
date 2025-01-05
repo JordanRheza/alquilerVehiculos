@@ -18,9 +18,10 @@ public class Marca {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     @Column(nullable = false, length = 50)
     private String nombre;
+
     @OneToMany(mappedBy = "marca")
     private List<Vehiculo> vehiculos = new ArrayList<>();
-
 }

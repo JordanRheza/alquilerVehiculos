@@ -21,7 +21,6 @@ public class Alquiler {
     private Date fecha_inicio;
     @Column(nullable = false)
     private Date fecha_fin;
-
     private Date fecha_entrega;
 
     @Column(nullable = false)
@@ -30,13 +29,10 @@ public class Alquiler {
     @ManyToOne
     @JoinColumn(name = "id_vehiculo", nullable = false)
     private Vehiculo vehiculo;
-
     @ManyToOne
     @JoinColumn(name = "id_cliente", nullable = false)
     private Cliente cliente;
-
     @ManyToOne
     @JoinColumn(name = "id_empleado", nullable = false)
     private Empleado empleado;
-
 }
