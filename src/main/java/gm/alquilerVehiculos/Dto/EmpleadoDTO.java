@@ -13,4 +13,5 @@ public class EmpleadoDTO {
     private String email;
     private String telefono;
     private String usuario;
+    private String clave;
 }

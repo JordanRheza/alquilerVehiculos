@@ -95,7 +95,8 @@ public class AlquilerController {
                 alquiler.getEmpleado().getNombre(),
                 alquiler.getEmpleado().getEmail(),
                 alquiler.getEmpleado().getTelefono(),
-                alquiler.getEmpleado().getUsuario()
+                alquiler.getEmpleado().getUsuario(),
+                alquiler.getEmpleado().getClave()
         );
 
         return new AlquilerDTO(
