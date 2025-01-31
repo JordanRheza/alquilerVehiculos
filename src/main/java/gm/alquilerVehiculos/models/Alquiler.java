@@ -1,5 +1,6 @@
 package gm.alquilerVehiculos.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,9 +19,12 @@ public class Alquiler {
     private Integer id;
 
     @Column(nullable = false)
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "America/Guayaquil")
     private Date fecha_inicio;
     @Column(nullable = false)
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "America/Guayaquil")
     private Date fecha_fin;
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "America/Guayaquil")
     private Date fecha_entrega;
 
     @Column(nullable = false)
