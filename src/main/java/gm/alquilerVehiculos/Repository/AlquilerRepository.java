@@ -1,6 +1,6 @@
-package gm.alquilerVehiculos.repository;
+package gm.alquilerVehiculos.Repository;
 
-import gm.alquilerVehiculos.models.Alquiler;
+import gm.alquilerVehiculos.Models.Alquiler;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

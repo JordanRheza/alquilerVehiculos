@@ -1,4 +1,4 @@
-package gm.alquilerVehiculos.models;
+package gm.alquilerVehiculos.Models;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;

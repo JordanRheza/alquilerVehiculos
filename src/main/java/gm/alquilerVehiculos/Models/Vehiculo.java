@@ -1,4 +1,4 @@
-package gm.alquilerVehiculos.models;
+package gm.alquilerVehiculos.Models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

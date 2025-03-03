@@ -14,8 +14,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(RecursoNoEncontradoException.class)
     public ResponseEntity<Map<String, Object>> handleNotFoundException(RecursoNoEncontradoException ex) {
         Map<String, Object> response = new HashMap<>();
-        response.put("mensaje", ex.getMessage());
-        response.put("estado", HttpStatus.NOT_FOUND.value());
+        response.put("Mensaje", ex.getMessage());
+        response.put("Estado", HttpStatus.NOT_FOUND.value());
 
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }

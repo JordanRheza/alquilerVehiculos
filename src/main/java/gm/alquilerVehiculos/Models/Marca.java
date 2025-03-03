@@ -1,4 +1,4 @@
-package gm.alquilerVehiculos.models;
+package gm.alquilerVehiculos.Models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -14,18 +14,14 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Cliente {
+public class Marca {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false, length = 50)
     private String nombre;
-    @Column(nullable = false, length = 100)
-    private String email;
-    @Column(nullable = false, length = 20)
-    private String telefono;
 
-    @OneToMany(mappedBy = "cliente")
-    private List<Alquiler> alquilers = new ArrayList<>();
+    @OneToMany(mappedBy = "marca")
+    private List<Vehiculo> vehiculos = new ArrayList<>();
 }

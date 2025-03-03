@@ -1,10 +1,10 @@
-package gm.alquilerVehiculos.services;
+package gm.alquilerVehiculos.Services;
 
 import gm.alquilerVehiculos.Dto.*;
 import gm.alquilerVehiculos.Exception.RecursoNoEncontradoException;
-import gm.alquilerVehiculos.models.Alquiler;
-import gm.alquilerVehiculos.models.Vehiculo;
-import gm.alquilerVehiculos.repository.AlquilerRepository;
+import gm.alquilerVehiculos.Models.Alquiler;
+import gm.alquilerVehiculos.Models.Vehiculo;
+import gm.alquilerVehiculos.Repository.AlquilerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -65,6 +65,7 @@ public class AlquilerService implements IAlquilerService{
         }
     }
 
+    //Covertir los Modelos a DTO
     private AlquilerDTO convertirAlquilerADTO(Alquiler alquiler) {
         VehiculoDTO vehiculoDTO = convertirVehiculoADTO(alquiler.getVehiculo());
 

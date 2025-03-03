@@ -1,8 +1,11 @@
 package gm.alquilerVehiculos.Controller;
 
+import gm.alquilerVehiculos.AlquilerVehiculosApplication;
 import gm.alquilerVehiculos.Dto.*;
-import gm.alquilerVehiculos.models.Alquiler;
-import gm.alquilerVehiculos.services.AlquilerService;
+import gm.alquilerVehiculos.Models.Alquiler;
+import gm.alquilerVehiculos.Services.AlquilerService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,12 +17,14 @@ import java.util.Map;
 @RestController
 @RequestMapping("api")
 public class AlquilerController {
+    private static final Logger logger = LogManager.getLogger(AlquilerVehiculosApplication.class);
     @Autowired
     private AlquilerService alquilerService;
 
     //http://localhost:8080/api/alquilers
     @GetMapping("/alquilers")
     public List<AlquilerDTO> obtenerAlquileres() {
+        logger.info(alquilerService.listarAlquilers());
         return alquilerService.listarAlquilers();
     }
 
@@ -47,7 +52,5 @@ public class AlquilerController {
         response.put("Alquiler eliminado", Boolean.TRUE);
         return ResponseEntity.ok(response);
     }
-
-
 
 }

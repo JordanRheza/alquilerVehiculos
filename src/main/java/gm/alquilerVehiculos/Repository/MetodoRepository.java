@@ -1,6 +1,6 @@
-package gm.alquilerVehiculos.repository;
+package gm.alquilerVehiculos.Repository;
 
-import gm.alquilerVehiculos.models.Metodo;
+import gm.alquilerVehiculos.Models.Metodo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface MetodoRepository extends JpaRepository<Metodo, Integer> {

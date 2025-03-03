@@ -1,6 +1,6 @@
-package gm.alquilerVehiculos.repository;
+package gm.alquilerVehiculos.Repository;
 
-import gm.alquilerVehiculos.models.Vehiculo;
+import gm.alquilerVehiculos.Models.Vehiculo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface VehiculoRepository extends JpaRepository<Vehiculo, Integer> {

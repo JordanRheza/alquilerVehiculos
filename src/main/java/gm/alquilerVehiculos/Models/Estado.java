@@ -1,4 +1,4 @@
-package gm.alquilerVehiculos.models;
+package gm.alquilerVehiculos.Models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -14,14 +14,14 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Metodo {
+public class Estado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 20)
     private String descripcion;
 
-    @OneToMany(mappedBy = "metodo")
-    private List<Pago> pagos = new ArrayList<>();
+    @OneToMany(mappedBy = "estado")
+    private List<Vehiculo> vehiculos = new ArrayList<>();
 }

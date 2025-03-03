@@ -1,7 +1,7 @@
-package gm.alquilerVehiculos.services;
+package gm.alquilerVehiculos.Services;
 
 import gm.alquilerVehiculos.Dto.AlquilerDTO;
-import gm.alquilerVehiculos.models.Alquiler;
+import gm.alquilerVehiculos.Models.Alquiler;
 
 import java.util.List;
 
